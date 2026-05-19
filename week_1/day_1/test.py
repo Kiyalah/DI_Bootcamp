@@ -1,19 +1,9 @@
-from random import randint
+word = input("Entrez un mot : ")
 
-random_number = randint(1, 9)
-tries = 0
+result = ""
 
-while True:
-    try:
-        number = int(input("Enter a number from 1 to 9 (inclusive): "))
-    except ValueError:
-        print("Please enter a valid integer.")
-        continue
+for letter in word:
+    if result == "" or letter != result[-1]:
+        result += letter
 
-    tries += 1
-
-    if number == random_number:
-        print(f"Congratulations! You guessed the number in {tries} tries.")
-        break
-
-    print("Try again")
+print(result)
