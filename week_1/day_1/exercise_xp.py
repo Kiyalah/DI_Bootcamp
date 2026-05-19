@@ -49,7 +49,7 @@ print(result)
 # True
 # False
 # TypeError
-# True
+# False
 
  
 # 🌟 Exercise 4: Your computer brand
@@ -92,10 +92,8 @@ print(info)
 # If a is bigger than b, have your code print "Hello World".
  
 
-a = int()
-b = int()
-a = input("Enter a number: ")
-b = input("Enter another number: ")
+a = int(input("Enter a number: "))
+b = int(input("Enter another number: "))
 
 if a > b:
     print("Hello World")
