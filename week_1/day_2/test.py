@@ -265,72 +265,72 @@
 # It's really hot! Stay cool.
 
 
-import random
+# import random
 
-def get_random_temp():
-    return random.randint(-10, 40)
+# def get_random_temp():
+#     return random.randint(-10, 40)
 
-def main():
-    temp = get_random_temp()
-    if temp < 0:
-        print("Brrr, that’s freezing! Wear some extra layers today.")
-    elif 0 <= temp < 16:
-        print("Quite chilly! Don’t forget your coat.")
-    elif 16 <= temp < 23:
-        print("Nice weather.")
-    elif 24 <= temp < 32:
-        print("A bit warm, stay hydrated.")
-    elif 32 <= temp < 40:
-        print("It’s really hot! Stay cool.")
-
-
-#Bonus
-import random
-
-def get_random_temp(month):
-
-    # Winter
-    if month in [12, 1, 2]:
-        return random.randint(-10, 16)
-
-    # Spring
-    elif month in [3, 4, 5]:
-        return random.randint(10, 23)
-
-    # Summer
-    elif month in [6, 7, 8]:
-        return random.randint(24, 40)
-
-    # Autumn
-    else:
-        return random.randint(0, 20)
+# def main():
+#     temp = get_random_temp()
+#     if temp < 0:
+#         print("Brrr, that’s freezing! Wear some extra layers today.")
+#     elif 0 <= temp < 16:
+#         print("Quite chilly! Don’t forget your coat.")
+#     elif 16 <= temp < 23:
+#         print("Nice weather.")
+#     elif 24 <= temp < 32:
+#         print("A bit warm, stay hydrated.")
+#     elif 32 <= temp < 40:
+#         print("It’s really hot! Stay cool.")
 
 
-def main():
+# #Bonus
+# import random
 
-    month = int(input("Enter a month (1-12): "))
+# def get_random_temp(month):
 
-    temp = get_random_temp(month)
+#     # Winter
+#     if month in [12, 1, 2]:
+#         return random.randint(-10, 16)
 
-    print(f"The current temperature is {temp}°C.")
+#     # Spring
+#     elif month in [3, 4, 5]:
+#         return random.randint(10, 23)
 
-    if temp < 0:
-        print("Brrr, that’s freezing! Wear some extra layers today.")
+#     # Summer
+#     elif month in [6, 7, 8]:
+#         return random.randint(24, 40)
 
-    elif 0 <= temp < 16:
-        print("Quite chilly! Don’t forget your coat.")
-
-    elif 16 <= temp < 23:
-        print("Nice weather.")
-
-    elif 24 <= temp < 32:
-        print("A bit warm, stay hydrated.")
-
-    elif 32 <= temp < 40:
-        print("It’s really hot! Stay cool.")
+#     # Autumn
+#     else:
+#         return random.randint(0, 20)
 
 
-main()
+# def main():
+
+#     month = int(input("Enter a month (1-12): "))
+
+#     temp = get_random_temp(month)
+
+#     print(f"The current temperature is {temp}°C.")
+
+#     if temp < 0:
+#         print("Brrr, that’s freezing! Wear some extra layers today.")
+
+#     elif 0 <= temp < 16:
+#         print("Quite chilly! Don’t forget your coat.")
+
+#     elif 16 <= temp < 23:
+#         print("Nice weather.")
+
+#     elif 24 <= temp < 32:
+#         print("A bit warm, stay hydrated.")
+
+#     elif 32 <= temp < 40:
+#         print("It’s really hot! Stay cool.")
+
+
+# main()
 
 
 # 🌟 Exercise 8: Pizza Toppings
@@ -351,25 +351,63 @@ main()
 # The base price is $10, and each topping adds $2.50.
 
 
-toppings = []
-total = 10
+# toppings = []
+# total = 10
 
-while True:
+# while True:
 
-    topping = input("Enter a pizza topping (or type 'quit' to finish): ")
+#     topping = input("Enter a pizza topping (or type 'quit' to finish): ")
 
-    if topping.lower() == "quit":
-        break
+#     if topping.lower() == "quit":
+#         break
 
-    toppings.append(topping)
+#     toppings.append(topping)
 
-    total += 2.50
+#     total += 2.50
 
-    print(f"Adding {topping} to your pizza.")
+#     print(f"Adding {topping} to your pizza.")
 
-print("\nYour pizza toppings are:")
+# print("\nYour pizza toppings are:")
 
-for topping in toppings:
-    print(f"- {topping}")
+# for topping in toppings:
+#     print(f"- {topping}")
 
-print(f"\nTotal price: ${total}")
+# print(f"\nTotal price: ${total}")
+
+
+
+items_purchase = {
+    "Water": "$1",
+    "Bread": "$3",
+    "TV": "$1,000",
+    "Fertilizer": "$20"
+}
+
+wallet = "$300"
+
+wallet_value = int(wallet.replace("$", "").replace(",", ""))
+
+basket = []
+
+# Loop through the dictionary
+for item, price in items_purchase.items():
+
+    # Clean and convert the price
+    price_value = int(price.replace("$", "").replace(",", ""))
+
+    # Check if the item is affordable
+    if price_value <= wallet_value:
+
+        # Add item to basket
+        basket.append(item)
+
+        # Update wallet
+        wallet_value -= price_value
+
+# Final result
+if len(basket) == 0:
+    print("Nothing")
+
+else:
+    print(sorted(basket))
+        
