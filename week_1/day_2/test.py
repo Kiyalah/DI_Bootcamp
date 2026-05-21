@@ -46,24 +46,25 @@
 
 
 
-# brand = {
-#     "name": "Zara",
-#     "creation_date": 1975,
-#     "creator_name": "Amancio Ortega Gaona",
-#     "type_of_clothes": ["men", "women", "children", "home"],
-#     "international_competitors": ["Gap", "H&M", "Benetton"],
-#     "number_stores": 7000,
-#     "major_color": {
-#         "France": "blue",
-#         "Spain": "red",
-#         "US": ["pink", "green"]
-#     }
-# }
+brand = {
+    "name": "Zara",
+    "creation_date": 1975,
+    "creator_name": "Amancio Ortega Gaona",
+    "type_of_clothes": ["men", "women", "children", "home"],
+    "international_competitors": ["Gap", "H&M", "Benetton"],
+    "number_stores": 7000,
+    "major_color": {
+        "France": "blue",
+        "Spain": "red",
+        "US": ["pink", "green"]
+    }
+}
 
 # brand["number_stores"] = 2
+clients = ", "
+clients = clients.join(brand["type_of_clothes"])
 
-
-# print("Zara's clients are:", brand["type_of_clothes"])
+print("Zara's clients are:", clients)
 
 # brand["country_creation"] = "Spain"
 
@@ -376,38 +377,38 @@
 
 
 
-items_purchase = {
-    "Water": "$1",
-    "Bread": "$3",
-    "TV": "$1,000",
-    "Fertilizer": "$20"
-}
+# items_purchase = {
+#     "Water": "$1",
+#     "Bread": "$3",
+#     "TV": "$1,000",
+#     "Fertilizer": "$20"
+# }
 
-wallet = "$300"
+# wallet = "$300"
 
-wallet_value = int(wallet.replace("$", "").replace(",", ""))
+# wallet_value = int(wallet.replace("$", "").replace(",", ""))
 
-basket = []
+# basket = []
 
-# Loop through the dictionary
-for item, price in items_purchase.items():
+# # Loop through the dictionary
+# for item, price in items_purchase.items():
 
-    # Clean and convert the price
-    price_value = int(price.replace("$", "").replace(",", ""))
+#     # Clean and convert the price
+#     price_value = int(price.replace("$", "").replace(",", ""))
 
-    # Check if the item is affordable
-    if price_value <= wallet_value:
+#     # Check if the item is affordable
+#     if price_value <= wallet_value:
 
-        # Add item to basket
-        basket.append(item)
+#         # Add item to basket
+#         basket.append(item)
 
-        # Update wallet
-        wallet_value -= price_value
+#         # Update wallet
+#         wallet_value -= price_value
 
-# Final result
-if len(basket) == 0:
-    print("Nothing")
+# # Final result
+# if len(basket) == 0:
+#     print("Nothing")
 
-else:
-    print(sorted(basket))
+# else:
+#     print(sorted(basket))
         
