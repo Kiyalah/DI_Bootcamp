@@ -39,7 +39,12 @@ class Cat:
 
     def oldest_cat(cat1, cat2, cat3):
         return max((cat1, cat2, cat3), key=lambda c: c.age)
-
+    
+    
+    # #V2 : better version with *args
+    # def oldest_cat_v2(*cats):
+    #     return max(cats, key=lambda c: c.age)
+    
 
 cat1 = Cat("Whiskers", 5)
 cat2 = Cat("Mittens", 7)
