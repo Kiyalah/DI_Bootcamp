@@ -18,11 +18,11 @@ class Game:
             # Vérification de la saisie
             if user_choice in ["rock", "paper", "scissors", "r", "p", "s"]:
                 # Mapper les choix abrégés vers les choix complets
-                if user_choice == "r":
+                if user_choice == "r" or user_choice == "rock":
                     return "rock"
-                elif user_choice == "p":
+                elif user_choice == "p" or user_choice == "paper":
                     return "paper"
-                elif user_choice == "s":
+                elif user_choice == "s" or user_choice == "scissors":
                     return "scissors"
 
             print("Invalid choice. Try again.")
