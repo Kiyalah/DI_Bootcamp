@@ -1,6 +1,6 @@
 venv/
-venvdi/
 __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 *.pyc
+week_5/mini_project/data/*
