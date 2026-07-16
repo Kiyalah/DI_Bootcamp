@@ -1,0 +1,7 @@
+$ python client.py
+Connected server: Demo
+Static resources: []
+Resource templates: ['greeting://{name}']
+Tools: ['add']
+greeting://hello -> Hello, hello!
+add(1, 7) -> 8
