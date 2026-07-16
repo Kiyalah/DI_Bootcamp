@@ -1,0 +1,12 @@
+$ python client.py
+Connected server: DemoServer
+Static resources: []
+Resource templates: ['greeting://{name}']
+Tools and input properties:
+- add: {'a': {'title': 'A', 'type': 'integer'}, 'b': {'title': 'B', 'type': 'integer'}}
+- multiply: {'a': {'title': 'A', 'type': 'integer'}, 'b': {'title': 'B', 'type': 'integer'}}
+LLM function names: ['add', 'multiply']
+Planner: deterministic stub
+Prompt: Add 2 to 20.
+tool_calls: [{'name': 'add', 'args': {'a': 2, 'b': 20}}]
+result add({'a': 2, 'b': 20}) -> 22
