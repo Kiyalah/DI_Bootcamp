@@ -1,0 +1,16 @@
+$ python mcp_airbnb_agent.py
+Notes tools: ['add_note', 'list_notes']
+Airbnb tools: ['airbnb_search', 'airbnb_listing_details']
+LLM/stub function names: ['notes__add_note', 'notes__list_notes', 'airbnb__airbnb_search', 'airbnb__airbnb_listing_details']
+Planner: deterministic stub
+Prompt: Find 2 Airbnb stays in Paris for 2 adults under $250 per night and save a note that I prefer a balcony.
+tool_calls: [{'name': 'airbnb__airbnb_search', 'args': {'location': 'Paris', 'adults': 2, 'maxPrice': 250, 'limit': 2}}, {'name': 'notes__add_note', 'args': {'text': 'I prefer a balcony'}}]
+tool_result: {'name': 'airbnb__airbnb_search', 'args': {'location': 'Paris', 'adults': 2, 'maxPrice': 250, 'limit': 2}, 'value': {'source': 'offline Airbnb stub', 'location': 'Paris', 'checkin': None, 'checkout': None, 'guests': {'adults': 2, 'children': 0, 'infants': 0, 'pets': 0}, 'propertyType': None, 'count': 2, 'listings': [{'id': 'paris-101', 'name': 'Canal-side studio', 'location': 'Paris, France', 'price_per_night': 145, 'rating': 4.82, 'features': ['balcony', 'wifi', 'kitchen'], 'url': 'https://example.com/airbnb/paris-101'}, {'id': 'paris-202', 'name': 'Montmartre apartment', 'location': 'Paris, France', 'price_per_night': 210, 'rating': 4.91, 'features': ['city view', 'workspace', 'washer'], 'url': 'https://example.com/airbnb/paris-202'}]}}
+tool_result: {'name': 'notes__add_note', 'args': {'text': 'I prefer a balcony'}, 'value': 'Saved note #1: I prefer a balcony'}
+
+FINAL ANSWER
+Listings for Paris:
+- Canal-side studio — 145 per night — rating 4.82 — https://example.com/airbnb/paris-101
+- Montmartre apartment — 210 per night — rating 4.91 — https://example.com/airbnb/paris-202
+
+Note: Saved note #1: I prefer a balcony
