@@ -1,0 +1,9 @@
+$ python client.py
+Connected server: WeatherDemo
+Resources: ['cities://list']
+Tools: ['get_weather']
+cities://list ->
+Paris
+London
+NYC
+get_weather(Paris) -> {'city': 'Paris', 'temp_c': 21, 'condition': 'sunny'}
