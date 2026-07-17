@@ -1,0 +1,17 @@
+================================================================================
+QUESTION: How should an Agentic RAG system handle weak evidence?
+MODE: stub
+ROUTE: kb
+TOOL CALLS: [{'name': 'search_knowledge_base', 'args': {'query': 'How should an Agentic RAG system handle weak evidence?', 'k': 3}, 'id': 'stub-kb-call'}]
+ANSWER: When retrieval evidence is weak or missing, the assistant should say so, avoid unsupported claims, and suggest a more specific follow-up question or a web search. [kb:missing-evidence] Retrieval-Augmented Generation combines retrieved evidence with model generation. [kb:rag-basics] An agentic RAG loop can decide whether to search an internal index, call an external web-search tool, inspect results, and repeat before producing a final answer. [kb:agentic-loop]
+SOURCES: ['kb:missing-evidence', 'kb:rag-basics', 'kb:agentic-loop']
+================================================================================
+QUESTION: What are the latest LangChain agent changes?
+MODE: stub
+ROUTE: kb+web
+TOOL CALLS: [{'name': 'search_knowledge_base', 'args': {'query': 'What are the latest LangChain agent changes?', 'k': 3}, 'id': 'stub-kb-call'}, {'name': 'search_web', 'args': {'query': 'What are the latest LangChain agent changes?', 'max_results': 3}, 'id': 'stub-web-call'}]
+ANSWER: LangChain can store Document objects in a FAISS index and expose the index through a retriever interface. [kb:faiss] An agentic RAG loop can decide whether to search an internal index, call an external web-search tool, inspect results, and repeat before producing a final answer. [kb:agentic-loop] LangChain agents combine models with tools and run in a loop until the model produces a final response. [web:langchain-agents]
+SOURCES: ['kb:faiss', 'kb:agentic-loop', 'web:langchain-agents', 'web:tavily-langchain', 'web:groq-models']
+================================================================================
+PYTEST: 3 passed
+STREAMLIT HEALTH: ok
