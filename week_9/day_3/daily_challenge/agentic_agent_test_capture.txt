@@ -1,0 +1,24 @@
+Required tests — verified with smolagents 1.26.0
+
+Question: Add 12 and 30.
+Tool: math_tool
+Arguments: {'a': 12.0, 'b': 30.0, 'op': 'add'}
+Observation: 42
+Final answer: The result is 42.
+
+Question: Multiply 7 by 6.
+Tool: math_tool
+Arguments: {'a': 7.0, 'b': 6.0, 'op': 'multiply'}
+Observation: 42
+Final answer: The result is 42.
+
+Question: What is an agentic AI loop?
+Tool: kb_lookup
+Observation: [kb:1] An agentic AI loop observes a task, plans the next action,
+selects a tool when needed, inspects the observation, and continues until it
+can answer.
+Final answer preserves [kb:1].
+
+Missing-evidence check:
+The agent states that the KB lacks enough evidence and proposes a more specific
+follow-up question.
