@@ -1,0 +1,19 @@
+# Core agent and graph runtime
+langchain>=1.0,<2
+langgraph>=1.0,<2
+
+# Gemini integrations
+langchain-google-genai>=4.0,<5
+google-genai>=1.0,<2
+
+# LangChain ↔ MCP bridge required by the assignment
+langchain-mcp-adapters==0.2.1
+
+# Custom and third-party Python MCP servers
+fastmcp>=2.0,<4
+mcp-server-git>=2026.1.14
+
+# Notebook utilities
+nest_asyncio>=1.6,<2
+ipykernel>=6,<8
+nbformat>=5,<6
